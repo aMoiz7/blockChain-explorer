@@ -1,0 +1,91 @@
+# Blockchain Explorer
+
+Description of your project.
+
+## Backend
+
+### Folder Structure
+
+src
+│
+├── controllers
+├── db
+├── models
+├── routes
+├── services
+├── utils
+├── app.ts
+│
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── tsconfig.json
+
+### Environment Variables
+
+Create a `.env` file in the root directory of the backend with the following content:
+
+PORT=8000
+MONGO_URI=mongodb://localhost:27017/explorer-backend
+STARKNET_API=https://starknet-mainnet.blastapi.io/455acb39-fa81-4256-b1ac-246eb845b344
+
+### How to Run
+
+1. Install dependencies:
+
+npm install
+
+2. Start the server:
+
+npm start
+
+## Frontend
+
+### Folder Structure
+
+frontend/blockchain_explorer_frontend
+│
+├── public
+│   ├── vite.svg
+│
+├── src
+│   ├── assets
+│   │   └── react.svg
+│   ├── context
+│   │   └── darkMode.tsx
+│   ├── pages
+│   │   ├── TransactionListPage.tsx
+│   │   └── transactionDetails.tsx
+│   ├── service
+│   │   └── api.ts
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   └── vite-env.d.ts
+│
+├── .eslintrc.cjs
+├── .gitignore
+├── README.md
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+### How to Run
+
+1. Navigate to the frontend directory:
+
+cd frontend/blockchain_explorer_frontend
+
+2. Install dependencies:
+
+npm install
+
+3. Start the development server:
+
+npm run dev
