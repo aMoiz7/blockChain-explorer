@@ -6,6 +6,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FiCopy } from 'react-icons/fi';
 import { useDarkMode } from '../context/darkMode';
 import 'tailwindcss/tailwind.css';
+import { FaSun } from 'react-icons/fa';
 
 interface Transaction {
   hash: string;
@@ -65,9 +66,9 @@ const Transactions: React.FC = () => {
         
           <button
             onClick={toggleDarkMode}
-            className="px-4 py-2 bg text-white rounded"
+            className="px-4 py-2  text-white rounded-3xl text-3xl w"
           >
-            Toggle Dark Mode
+            <FaSun className=' w-16 h-15 text-blue-700'/>
           </button>
         </div>
         <h5 className="text-xl font-bold">A list of transactions on Starknet</h5>
