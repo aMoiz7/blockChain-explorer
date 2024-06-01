@@ -58,6 +58,25 @@ const Transactions: React.FC = () => {
     return `${hash.slice(0, 6)}...${hash.slice(-4)}`;
   };
 
+
+
+  const getTypeColor = (type:any) => {
+    switch (type) {
+      case 'DECLARE':
+        return 'bg-blue-400 text-blue-500 bg-opacity-10';
+      case 'DEPLOY':
+        return 'bg-yellow-400 text-yellow-500 bg-opacity-10';
+      case 'DEPLOY_ACCOUNT':
+        return 'bg-purple-400 text-purple-500 bg-opacity-10';
+      case 'INVOKE':
+        return 'bg-green-400 text-green-500 bg-opacity-10';
+      case 'L1_HANDLER':
+        return 'bg-red-400 text-red-500 bg-opacity-10';
+      default:
+        return 'bg-gray-400 text-gray-500 bg-opacity-10';
+    }
+  };
+
   return (
     <div className={`${darkMode ? 'bg-neutral-800  text-white' : 'bg-white text-black'} min-h-screen flex items-center justify-center`}>
       <div className="container mx-auto py-8">
@@ -88,6 +107,8 @@ const Transactions: React.FC = () => {
             loader={<h4>Loading...</h4>}
             endMessage={<p>No more transactions</p>}
             height={500}
+            style={{ overflowY: 'scroll', height: 500 }} // Ensure the container has a fixed height and vertical scroll
+            className="scroll-container"
           >
             <div className="grid grid-cols-1 gap-4  ">
               <div className="grid grid-cols-5 gap-4  p-4 rounded border-b border-gray-800">
@@ -115,7 +136,8 @@ const Transactions: React.FC = () => {
 
                   
 
-                  <div className='rounded-md bg-green-400 text-green-500 bg-opacity-10 w-fit   '>{tx.type}</div>
+                  <div className={`rounded-md w-fit ${getTypeColor(tx.type)}`}>{tx.type}</div>
+
                   <div className=''>{tx.blockNumber}</div>
                   <div className=''>{new Date(tx.timestamp * 1000).toLocaleString()}</div>
                  

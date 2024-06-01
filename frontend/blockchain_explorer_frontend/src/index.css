@@ -13,3 +13,21 @@
     text-decoration: none;
   }
   
+
+  /* CSS */
+.scroll-container::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  .scroll-container::-webkit-scrollbar-track {
+    background: #000000; /* Color of the track */
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar */
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar on hover */
+  }
+  
