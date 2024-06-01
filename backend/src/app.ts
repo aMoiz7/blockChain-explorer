@@ -12,6 +12,10 @@ const port = process.env.PORT
 
 connect()
 
+app.use(cors({
+    origin:"*",
+    credentials:true
+}))
 app.use(Express.urlencoded({ extended: true }));
 app.use(Express.json())
 

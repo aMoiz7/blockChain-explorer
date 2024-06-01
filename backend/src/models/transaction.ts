@@ -12,7 +12,7 @@ interface ITransaction {
 }
 
 const transactionSchema = new Schema<ITransaction>({
-  hash: { type: String, required: true },
+  hash: { type: String, required: true , unique:true },
   blockNumber: { type: Number, required: true,},
   timestamp: { type: Number,required: true, },
   type: { type: String, required: true,},

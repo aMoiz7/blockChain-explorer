@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg{
+    background-color: rgb(27, 27, 27);
+   
+}
+.underline {
+    border-bottom: 1px solid ; /* Or any other color */
+    border-color: grey;
+    padding-bottom: 2px;
+    text-decoration: none;
+  }
+  
