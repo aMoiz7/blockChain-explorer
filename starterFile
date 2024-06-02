@@ -27,7 +27,7 @@ Create a `.env` file in the root directory of the backend with the following con
 
 PORT=8000
 MONGO_URI=mongodb://localhost:27017/explorer-backend
-STARKNET_API=https://starknet-mainnet.blastapi.io/455acb39-fa81-4256-b1ac-246eb845b344
+STARKNET_API=https://starknet-mainnet.blastapi.io/{API_KEY}
 
 ### How to Run
 
